@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+CONTAINER_NAME=python39
+
+if [ "$1" != "" ]
+then
+  CONTAINER_NAME="$1"
+fi
+
+docker exec -it $CONTAINER_NAME bash

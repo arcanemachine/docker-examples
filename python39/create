@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+if [ "$1" != "" ]
+then
+  CONTAINER_NAME="$1"
+elif [ "$CONTAINER_NAME" == "" ]
+then
+  CONTAINER_NAME=python39
+fi
+
+echo "Creating python3.9 container named $CONTAINER_NAME"
+docker run --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td arcanemachine/python3.9
