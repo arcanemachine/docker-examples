@@ -1,16 +1,13 @@
 # syntax=docker/dockerfile:1
 
-# select the image
+# image
 FROM debian:bullseye-slim
 
 # setup the environment
 ENV LANG=C.UTF-8
 
-ARG USERNAME=user
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
-
 # create a non-root user
+ARG USERNAME=user
 RUN useradd --create-home --shell /bin/bash --no-log-init $USERNAME
 
 # give user sudo privileges
