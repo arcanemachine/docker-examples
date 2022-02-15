@@ -26,4 +26,4 @@ else
   USERNAME="$1"
 fi
 
-docker push arcanemachine/debian:bullseye-slim
+docker push arcanemachine/debian

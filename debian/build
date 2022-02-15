@@ -1,1 +1,1 @@
-docker build -t arcanemachine/docker:bullseye-slim .
+docker build -t arcanemachine/debian .

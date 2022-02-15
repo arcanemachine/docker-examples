@@ -16,4 +16,4 @@ echo ""
 
 # create the container and prevent it from stopping automatically with -td
 #   - -t allocates a pseudo-TTY and -d runs the container in the background
-docker run --name $CONTAINER_NAME --hostname debian -td arcanemachine/debian:bullseye-slim bash
+docker run --name $CONTAINER_NAME --hostname debian -td arcanemachine/debian bash
