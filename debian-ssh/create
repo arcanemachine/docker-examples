@@ -6,7 +6,7 @@ source ./preflight-check
 if [ "$1" == "" ]
 then
   echo "No container name specified."
-  echo "To set a custom name for this container, run this command:"
+  echo "To set a custom name for this container set the DOCKER_CONTAINER_NAME as an environment variable, or run this command:"
   echo "'$(dirname "$0")/create [DOCKER_CONTAINER_NAME]'."
   echo ""
 fi
