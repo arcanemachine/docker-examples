@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+# get name of container
+if [ "$1" == "" ]
+then
+  CONTAINER_NAME=bullseye-slim-user-1
+else
+  CONTAINER_NAME="$1"
+fi
+
+echo "Stopping '$CONTAINER_NAME'..."
+docker stop -t 1 $CONTAINER_NAME
