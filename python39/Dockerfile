@@ -1,12 +1,11 @@
 # syntax=docker/dockerfile:1
 
-# image
-FROM python:3.9
+FROM python:3.9-slim-bullseye
 
-# create a non-root user
+# create unprivileged user
 ARG USERNAME=user
 RUN useradd --create-home --shell /bin/bash --no-log-init $USERNAME
 
-# use non-root user
+# work as unprivileged user
 USER $USERNAME
 WORKDIR /home/user
