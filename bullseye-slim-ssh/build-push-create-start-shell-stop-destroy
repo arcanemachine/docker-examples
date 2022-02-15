@@ -1,0 +1,11 @@
+#!/bin/bash
+cd $(dirname "$0")
+./preflight-check
+
+./build
+./push
+./create
+./start
+./shell
+./stop
+./destroy
