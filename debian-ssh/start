@@ -36,9 +36,3 @@ else
   fi
 
 fi
-
-# open a terminal session
-echo "Opening a terminal session..."
-docker exec -it $DOCKER_CONTAINER_NAME bash
-
-echo "goodbye"

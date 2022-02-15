@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $(dirname "$0")
+source ./preflight-check
+
+echo "Spawning shell for '$DOCKER_CONTAINER_NAME'..."
+docker exec -it $DOCKER_CONTAINER_NAME bash

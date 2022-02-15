@@ -17,7 +17,7 @@ then
   exit 1
 fi
 
-# require DOCKER_IMAGE_TAG to be set
+# get DOCKER_IMAGE_TAG
 if [ "$DOCKER_IMAGE_TAG" == "" ]
 then
   echo "DOCKER_IMAGE_TAG not set. Using 'latest'..."
