@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $(dirname "$0")
+source ./preflight-check
+
+./build $1
+./push $1
