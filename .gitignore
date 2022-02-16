@@ -5,3 +5,6 @@
 .env
 Session.vim
 *.del
+
+# SSH keys
+id_rsa
