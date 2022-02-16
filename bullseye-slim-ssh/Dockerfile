@@ -3,7 +3,7 @@
 FROM arcanemachine/bullseye-slim
 
 # install ssh server
-RUN apt-get update\
+RUN apt-get update \
     && apt-get -y install openssh-server
 
 # create ssh config folder with proper permissions
