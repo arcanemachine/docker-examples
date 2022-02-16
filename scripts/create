@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
-cd $(dirname "${BASH_SOURCE[0]}")/..
+cd $DOCKER_PROJECT_FOLDER
 
 # get name of container
 if [ "$1" == "" ]
@@ -19,4 +19,4 @@ echo ""
 # create the container and prevent it from stopping automatically with -td
 #   * -t allocates a pseudo-TTY
 #   * -d runs the container in the background
-docker run --name $DOCKER_CONTAINER_NAME --hostname $DOCKER_CONTAINER_NAME -td $DOCKER_USERNAME/$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG
+docker run --name $DOCKER_CONTAINER_NAME --hostname $DOCKER_CONTAINER_NAME -td $DOCKER_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG

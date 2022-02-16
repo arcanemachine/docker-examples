@@ -2,7 +2,7 @@
 
 This is a collection of Docker containers I've made to make life easier for myself and others.
 
-Also included is a folder called `scripts` that perform many useful functions that I use frequently: starting/stopping/building containers, etc.
+Also included is a folder called `scripts` that perform many useful functions that I use frequently: starting/stopping/building containers, etc. This folder is symlinked into each project for portability and ease of use.
 
 
 ## Environment

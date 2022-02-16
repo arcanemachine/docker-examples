@@ -16,6 +16,8 @@ then
   echo "  - Ensure that you have set your environment variables properly"
   echo "  - Make sure you are running these scripts inside a Docker project folder, and not the root 'scripts' folder of the repo."
   exit 1
+else
+  export DOCKER_USERNAME="$DOCKER_USERNAME/"
 fi
 
 # require DOCKER_IMAGE_NAME to be set

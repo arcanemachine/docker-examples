@@ -1,7 +1,8 @@
 #!/bin/bash
 cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
-cd $(dirname "${BASH_SOURCE[0]}")/..
+cd $DOCKER_PROJECT_FOLDER
+
 
 # check output of grep to see if we need to create the container first
 docker ps -a | grep -q $DOCKER_CONTAINER_NAME
