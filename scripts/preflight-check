@@ -41,9 +41,15 @@ else
 fi
 
 # get name of container
-if [ "$1" == "" ]
+if [ "$DOCKER_CONTAINER_NAME" == "" ]
 then
   export DOCKER_CONTAINER_NAME=$DOCKER_IMAGE_NAME-1
-else
-  export DOCKER_CONTAINER_NAME="$1"
+  echo "DOCKER_CONTAINER_NAME not set. Using '$DOCKER_CONTAINER_NAME'..."
+fi
+
+# get DOCKER_CONTAINER_USER
+if [ "$DOCKER_CONTAINER_USER" == "" ]
+then
+  export DOCKER_CONTAINER_USER="root"
+  echo "DOCKER_CONTAINER_USER not set. Using 'root'..."
 fi
