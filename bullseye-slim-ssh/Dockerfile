@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM arcanemachine/bullseye-slim
+FROM arcanemachine/bullseye-slim-user
 
 # copied from: https://adamtheautomator.com/ssh-into-docker-container/
 # USER root

@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # image
-FROM arcanemachine:bullseye-slim
+FROM arcanemachine/bullseye-slim
 
 # create a non-root user
 ARG USERNAME=user

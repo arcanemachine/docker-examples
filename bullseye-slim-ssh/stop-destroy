@@ -1,6 +1,0 @@
-#!/bin/bash
-cd $(dirname "$0")
-./preflight-check
-
-./stop $DOCKER_CONTAINER_NAME
-./destroy $DOCKER_CONTAINER_NAME

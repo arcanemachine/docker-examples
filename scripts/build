@@ -1,5 +1,5 @@
 #!/bin/bash
-cd $(dirname "$0")
+cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
 
 docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG .

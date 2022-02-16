@@ -1,8 +1,0 @@
-#!/bin/bash
-cd $(dirname "$0")
-./preflight-check
-
-./build
-./create
-./start
-./shell

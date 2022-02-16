@@ -1,5 +1,6 @@
 #!/bin/bash
-cd $DOCKER_PROJECT_ROOT
-source $DOCKER_PROJECT_ROOT/scripts/preflight-check
+cd $(dirname "${BASH_SOURCE[0]}")
+source ./preflight-check
+cd $(dirname "${BASH_SOURCE[0]}")/..
 
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $DOCKER_CONTAINER_NAME

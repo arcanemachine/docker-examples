@@ -1,6 +1,7 @@
 #!/bin/bash
-cd $(dirname "$0")
+cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
+cd $(dirname "${BASH_SOURCE[0]}")/..
 
 # check output of grep to see if we need to create the container first
 docker ps -a | grep -q $DOCKER_CONTAINER_NAME
@@ -29,7 +30,8 @@ else
 
   if [ "$CREATE_NEW" != "n" ]
   then
-    ./create $DOCKER_CONTAINER_NAME $1
+    cd $(dirname "${BASH_SOURCE[0]}")
+    ./create $DOCKER_CONTAINER_NAME
   else
     echo "goodbye"
     exit 0

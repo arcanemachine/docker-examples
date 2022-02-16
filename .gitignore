@@ -1,2 +1,7 @@
+# temp files
 *.sw?
+
+# misc
+.env
 Session.vim
+*.del
