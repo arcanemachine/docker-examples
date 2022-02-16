@@ -1,8 +1,8 @@
 # bullseye-slim
 
-My barely-modified build of `[debian:bullseye-slim](https://hub.docker.com/_/debian)`.
+My slightly-modified build of `[debian:bullseye-slim](https://hub.docker.com/_/debian)`.
 
 
 ### Features
 
-- LANG=C.UTF-8
+- Set locale to C.UTF-8

@@ -1,9 +1,10 @@
 # bullseye-slim-user
 
-A build of `[arcanemachine:bullseye-slim](https://hub.docker.com/_/debian)` with a non-privileged user account (with sudo privileges).
+Extends `[arcanemachine:bullseye-slim](https://hub.docker.com/repository/docker/arcanemachine/bullseye-slim)`.
 
 
 ### Features
 
-- Added non-root user named `user` with `sudo` privileges
+- Adds non-root user with `sudo` privileges
 - Starts as `user` in `/home/user/`
+- Username can be overridden by setting `DOCKER_CONTAINER_USERNAME` before building the image

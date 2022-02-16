@@ -1,8 +1,10 @@
-# bullseye-slim-ssh
+# bullseye-slim-ssh-user
 
-Contains everything in my `[bullseye-slim](https://hub.docker.com/repository/docker/arcanemachine/bullseye-slim)` container, plus a basic SSH setup.
+Extends `[arcanemachine/bullseye-slim](https://hub.docker.com/repository/docker/arcanemachine/bullseye-slim)`.
 
 
 ### Features
 
-- Installed SSH
+- Add non-root user with `sudo` privileges
+- SSH installed and started
+- Use included key `id_rsa` and file `container-ssh` to SSH into this container.
