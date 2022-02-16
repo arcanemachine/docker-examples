@@ -27,7 +27,10 @@ then
 
 else
   # container does not yet exist
-  read -p "Container doesn't exist. Create a new container? (Y/n): " CREATE_NEW
+  if [ "$CREATE_NEW" == "" ]
+  then
+    read -p "Container doesn't exist. Create a new container? (Y/n): " CREATE_NEW
+  fi
 
   if [ "$CREATE_NEW" != "n" ]
   then

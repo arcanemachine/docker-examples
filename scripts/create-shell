@@ -4,4 +4,4 @@ source ./preflight-check
 cd $DOCKER_PROJECT_FOLDER/scripts
 
 ./create $DOCKER_CONTAINER_NAME
-./start $DOCKER_CONTAINER_NAME
+./shell $DOCKER_CONTAINER_NAME

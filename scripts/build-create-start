@@ -1,8 +1,0 @@
-#!/bin/bash
-cd $(dirname "${BASH_SOURCE[0]}")
-source ./preflight-check
-cd $DOCKER_PROJECT_FOLDER/scripts
-
-./build
-./create $DOCKER_CONTAINER_NAME
-./start $DOCKER_CONTAINER_NAME
