@@ -19,4 +19,4 @@ echo ""
 # create the container and prevent it from stopping automatically with -td
 #   * -t allocates a pseudo-TTY
 #   * -d runs the container in the background
-docker run --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td $DOCKER_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG
+docker run --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td $DOCKER_HUB_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG

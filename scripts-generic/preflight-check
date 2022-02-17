@@ -7,17 +7,17 @@ export DOCKER_PROJECT_FOLDER=`pwd`
 # source the environment variables for the project
 source .envrc
 
-# require DOCKER_USERNAME to be set
-if [ "$DOCKER_USERNAME" == "" ]
+# require DOCKER_HUB_USERNAME to be set
+if [ "$DOCKER_HUB_USERNAME" == "" ]
 then
-  echo "DOCKER_USERNAME not set"
+  echo "DOCKER_HUB_USERNAME not set"
   echo ""
   echo "Check the following:"
   echo "  - Ensure that you have set your environment variables properly"
   echo "  - Make sure you are running these scripts inside a Docker project folder, and not the root 'scripts' folder of the repo."
   exit 1
 else
-  export DOCKER_USERNAME="$DOCKER_USERNAME/"
+  export DOCKER_HUB_USERNAME="$DOCKER_HUB_USERNAME/"
 fi
 
 # require DOCKER_IMAGE_NAME to be set
