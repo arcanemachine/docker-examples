@@ -1,6 +1,6 @@
-# python39
+# python39-slim-bullseye
 
-A basic shell for `[Python 3.9](https://hub.docker.com/_/python/)`. Uses `python:3.9-slim-buster`.
+Extends `python:3.9-slim-bullseye`
 
 
 ### Features
