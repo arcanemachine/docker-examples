@@ -41,8 +41,15 @@ else
 fi
 
 # get name of container
-if [ "$CONTAINER_NAME" == "" ]
+if [ "$CONTAINER_NAME" != "" ]
 then
+  export CONTAINER_NAME="$CONTAINER_NAME"
+  echo "Using container name '$CONTAINER_NAME'..."
+elif [ "$1" != "" ]
+then
+  export CONTAINER_NAME="$1"
+  echo "Using container name '$CONTAINER_NAME'..."
+else
   export CONTAINER_NAME=$DOCKER_IMAGE_NAME-1
   echo "CONTAINER_NAME not set. Using '$CONTAINER_NAME'..."
 fi
