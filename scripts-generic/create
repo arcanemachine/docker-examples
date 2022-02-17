@@ -8,15 +8,15 @@ if [ "$1" == "" ]
 then
   echo "No container name specified."
   echo ""
-  echo "To set a name for this container set the DOCKER_CONTAINER_NAME as an environment variable."
-  echo "You can also run this command: '$(dirname "$0")/create [DOCKER_CONTAINER_NAME]'."
+  echo "To set a name for this container set the CONTAINER_NAME as an environment variable."
+  echo "You can also run this command: '$(dirname "$0")/create [CONTAINER_NAME]'."
   echo ""
 fi
 
-echo "Using name '$DOCKER_CONTAINER_NAME' for this container..."
+echo "Using name '$CONTAINER_NAME' for this container..."
 echo ""
 
 # create the container and prevent it from stopping automatically with -td
 #   * -t allocates a pseudo-TTY
 #   * -d runs the container in the background
-docker run --name $DOCKER_CONTAINER_NAME --hostname $DOCKER_CONTAINER_NAME -td $DOCKER_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG
+docker run --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td $DOCKER_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG

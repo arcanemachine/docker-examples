@@ -3,5 +3,5 @@ cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
 cd $DOCKER_PROJECT_FOLDER/scripts
 
-echo "Stopping '$DOCKER_CONTAINER_NAME'..."
-docker stop -t 1 $DOCKER_CONTAINER_NAME
+echo "Stopping '$CONTAINER_NAME'..."
+docker stop -t 1 $CONTAINER_NAME

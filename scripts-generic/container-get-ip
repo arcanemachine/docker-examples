@@ -3,4 +3,4 @@ cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
 cd $DOCKER_PROJECT_FOLDER
 
-docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $DOCKER_CONTAINER_NAME
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $CONTAINER_NAME

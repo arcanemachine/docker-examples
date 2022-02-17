@@ -3,5 +3,5 @@ cd $(dirname "${BASH_SOURCE[0]}")
 source ./preflight-check
 cd $DOCKER_PROJECT_FOLDER/scripts
 
-echo "Spawning shell for '$DOCKER_CONTAINER_NAME'..."
-docker exec -it $DOCKER_CONTAINER_NAME bash
+echo "Spawning shell for '$CONTAINER_NAME'..."
+docker exec -it $CONTAINER_NAME bash

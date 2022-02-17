@@ -4,7 +4,7 @@ source ./preflight-check
 cd $DOCKER_PROJECT_FOLDER/scripts
 
 ./build
-./create $DOCKER_CONTAINER_NAME
-./shell $DOCKER_CONTAINER_NAME
-./stop $DOCKER_CONTAINER_NAME
-./destroy $DOCKER_CONTAINER_NAME
+./create $CONTAINER_NAME
+./shell $CONTAINER_NAME
+./stop $CONTAINER_NAME
+./destroy $CONTAINER_NAME

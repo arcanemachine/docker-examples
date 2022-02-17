@@ -5,23 +5,23 @@ cd $DOCKER_PROJECT_FOLDER
 
 
 # check output of grep to see if we need to create the container first
-docker ps -a | grep -q $DOCKER_CONTAINER_NAME
+docker ps -a | grep -q $CONTAINER_NAME
 
 if [ $? == 0 ]
 then
   # container exists
-  echo "$DOCKER_CONTAINER_NAME exists. Let's check to see if it's running or not..."
+  echo "$CONTAINER_NAME exists. Let's check to see if it's running or not..."
 
   # check if the container is running
-  docker ps -a --filter "status=running" | grep -q $DOCKER_CONTAINER_NAME
+  docker ps -a --filter "status=running" | grep -q $CONTAINER_NAME
   
   if [ $? == 1 ]
   then
     # container is not running. let's start it...
-    echo "$DOCKER_CONTAINER_NAME is not running. Starting it..."
-    docker start $DOCKER_CONTAINER_NAME
+    echo "$CONTAINER_NAME is not running. Starting it..."
+    docker start $CONTAINER_NAME
   else
-    echo "$DOCKER_CONTAINER_NAME is already running."
+    echo "$CONTAINER_NAME is already running."
   fi
 
 
@@ -35,7 +35,7 @@ else
   if [ "$CREATE_NEW" != "n" ]
   then
     cd $(dirname "${BASH_SOURCE[0]}")
-    ./create $DOCKER_CONTAINER_NAME
+    ./create $CONTAINER_NAME
   else
     echo "goodbye"
     exit 0
