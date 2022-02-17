@@ -35,7 +35,7 @@ else
   if [ "$CREATE_NEW" != "n" ]
   then
     cd $(dirname "${BASH_SOURCE[0]}")
-    ./create $CONTAINER_NAME
+    ./run $CONTAINER_NAME
   else
     echo "goodbye"
     exit 0

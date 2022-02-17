@@ -5,4 +5,7 @@ cd $DOCKER_PROJECT_FOLDER/scripts-generic
 
 ./build
 ./push
-./create $CONTAINER_NAME
+./run $CONTAINER_NAME
+./shell $CONTAINER_NAME
+./stop $CONTAINER_NAME
+./destroy $CONTAINER_NAME
