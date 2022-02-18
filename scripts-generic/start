@@ -10,7 +10,7 @@ docker ps -a | grep -q $CONTAINER_NAME
 if [ $? == 0 ]
 then
   # container exists
-  echo "$CONTAINER_NAME exists. Let's check to see if it's running or not..."
+  echo "Container '$CONTAINER_NAME' exists. Let's check to see if it's running or not..."
 
   # check if the container is running
   docker ps -a --filter "status=running" | grep -q $CONTAINER_NAME
@@ -18,10 +18,10 @@ then
   if [ $? == 1 ]
   then
     # container is not running. let's start it...
-    echo "$CONTAINER_NAME is not running. Starting it..."
+    echo "Container '$CONTAINER_NAME' is not running. Starting it..."
     docker start $CONTAINER_NAME
   else
-    echo "$CONTAINER_NAME is already running."
+    echo "Container '$CONTAINER_NAME' is already running."
   fi
 
 
