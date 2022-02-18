@@ -4,7 +4,7 @@ source ./preflight-check
 cd $(dirname "${BASH_SOURCE[0]}")
 
 SSH_HOST=$(./scripts-generic/container-get-ip)
-SSH_AUTH_SOCK=''
+SSH_AUTH_SOCK=""
 
 # remove existing fingerprint from known hosts
 # this prevents warnings about MITM attacks
