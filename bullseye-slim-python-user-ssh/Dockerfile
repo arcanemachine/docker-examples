@@ -2,12 +2,12 @@
 
 FROM arcanemachine/bullseye-slim
 
+# install python
+RUN apt-get update \
+    && apt-get install -y python3
+
 ARG user=${DOCKER_CONTAINER_USER:-user}
 ARG user_home=/home/$user
-
-# install and start the ssh server
-RUN apt-get update && \
-    apt-get -y install openssh-server
 
 # create a non-root user
 RUN useradd --create-home --shell /bin/bash --no-log-init $user
@@ -28,12 +28,16 @@ COPY id_rsa.pub ${user_home}/.ssh/authorized_keys
 RUN sudo chown $user:$user $user_home/.ssh/authorized_keys \
     && chmod 600 $user_home/.ssh/authorized_keys
 
-# work as non-root user; start in user's home directory
-USER $user
-WORKDIR $user_home
+# install ssh server
+RUN apt-get update && \
+    apt-get -y install openssh-server
 
 # expose port 22 for ssh
 EXPOSE 22
+
+# work as non-root user; start in user's home directory
+USER $user
+WORKDIR $user_home
 
 # start the ssh server
 RUN sudo mkdir /var/run/sshd
