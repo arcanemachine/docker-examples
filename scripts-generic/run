@@ -16,7 +16,18 @@ fi
 echo "Using name '$CONTAINER_NAME' for this container..."
 echo ""
 
+# create a privileged container
+if [ "$PRIVILEGED" == 1 ]
+then
+  CONTAINER_PRIVILEGES="--privileged"
+  echo ""
+  echo "***************************************************************"
+  echo "*** THIS CONTAINER WILL BE CREATED WITH EXTENDED PRIVILEGES ***"
+  echo "***************************************************************"
+  echo ""
+fi
+
 # run the container and prevent it from stopping automatically with -td
 #   * -t allocates a pseudo-TTY
 #   * -d runs the container in the background
-docker run --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td $DOCKER_HUB_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG
+docker run $CONTAINER_PRIVILEGES --name $CONTAINER_NAME --hostname $CONTAINER_NAME -td $DOCKER_HUB_USERNAME$DOCKER_IMAGE_NAME$DOCKER_IMAGE_TAG
