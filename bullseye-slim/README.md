@@ -1,6 +1,6 @@
 # bullseye-slim
 
-My slightly-modified build of `[debian:bullseye-slim](https://hub.docker.com/_/debian)`.
+My slightly-modified build of [debian:bullseye-slim](https://hub.docker.com/_/debian).
 
 
 ### Features

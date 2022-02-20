@@ -1,6 +1,6 @@
 # bullseye-slim-user
 
-Extends `[arcanemachine:bullseye-slim](https://hub.docker.com/repository/docker/arcanemachine/bullseye-slim)`.
+Extends [arcanemachine:bullseye-slim](https://hub.docker.com/repository/docker/arcanemachine/bullseye-slim).
 
 
 ### Features

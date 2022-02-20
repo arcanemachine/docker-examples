@@ -1,6 +1,6 @@
 # bullseye-slim
 
-A DinD build based on `[debian:bullseye-slim](https://hub.docker.com/_/debian)`. Mostly stolen from [this GitHub issues post](https://github.com/docker-library/docker/issues/306#issuecomment-815338333)
+A DinD build based on [debian:bullseye-slim](https://hub.docker.com/_/debian). Mostly stolen from [this GitHub issues post](https://github.com/docker-library/docker/issues/306#issuecomment-815338333)
 
 ### Features
 
