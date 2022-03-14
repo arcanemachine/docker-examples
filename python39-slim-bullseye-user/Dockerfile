@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9-slim-bullseye
+FROM docker.io/python:3.9-slim-bullseye
 
 # create unprivileged user
 ARG USERNAME=user

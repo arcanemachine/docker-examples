@@ -5,4 +5,4 @@ cd $DOCKER_PROJECT_FOLDER/scripts-generic
 
 ./build
 ./run $CONTAINER_NAME
-./container-shell $CONTAINER_NAME
+./shell $CONTAINER_NAME
